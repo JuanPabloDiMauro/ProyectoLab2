@@ -1,0 +1,108 @@
+# depslib dependency file v1.0
+1715463502 source:b:\laboratorio 2 2024\tallercarpinteria\fecha.cpp
+	<iostream>
+	"Fecha.h"
+	<ctime>
+
+1715463505 b:\laboratorio 2 2024\tallercarpinteria\fecha.h
+
+1715572055 source:b:\laboratorio 2 2024\tallercarpinteria\main.cpp
+	"menu.h"
+
+1715615213 b:\laboratorio 2 2024\tallercarpinteria\funcionesglobales.h
+	"placa.h"
+	"medidas.h"
+	"trabajos.h"
+
+1715553908 b:\laboratorio 2 2024\tallercarpinteria\presupuesto.h
+
+1715798881 source:b:\laboratorio 2 2024\tallercarpinteria\medidas.cpp
+	<iostream>
+	"medidas.h"
+	"funcionesGlobales.h"
+
+1715620296 b:\laboratorio 2 2024\tallercarpinteria\medidas.h
+	"placa.h"
+
+1715450997 b:\laboratorio 2 2024\tallercarpinteria\placa.h
+
+1715466836 source:b:\laboratorio 2 2024\tallercarpinteria\menu.cpp
+	<iostream>
+	"menu.h"
+	"submenu.h"
+
+1699304307 b:\laboratorio 2 2024\tallercarpinteria\menu.h
+
+1715466324 b:\laboratorio 2 2024\tallercarpinteria\submenu.h
+
+1715478671 source:b:\laboratorio 2 2024\tallercarpinteria\persona.cpp
+	<iostream>
+	"persona.h"
+	<cstring>
+	"funcionesGlobales.h"
+
+1715464651 b:\laboratorio 2 2024\tallercarpinteria\persona.h
+
+1715547704 source:b:\laboratorio 2 2024\tallercarpinteria\placa.cpp
+	"placa.h"
+	<cstring>
+
+1715553908 source:b:\laboratorio 2 2024\tallercarpinteria\presupuesto.cpp
+	"presupuesto.h"
+
+1715798881 source:b:\laboratorio 2 2024\tallercarpinteria\submenu.cpp
+	<iostream>
+	"submenu.h"
+	"funcionesGlobales.h"
+
+1715798983 source:b:\laboratorio 2 2024\tallercarpinteria\funcionesglobales.cpp
+	<iostream>
+	"medidas.h"
+	"presupuesto.h"
+	"Clientes.h"
+	"trabajos.h"
+	"CalcularPlacas.h"
+	"ArchivosTrabajos.h"
+	"ArchivosMedidas.h"
+
+1715552905 source:b:\laboratorio 2 2024\tallercarpinteria\calcularplacas.cpp
+	"CalcularPlacas.h"
+
+1715549389 b:\laboratorio 2 2024\tallercarpinteria\calcularplacas.h
+	"placa.h"
+	"medidas.h"
+
+1715552916 source:b:\laboratorio 2 2024\tallercarpinteria\clientes.cpp
+	<iostream>
+	"Clientes.h"
+	"funcionesGlobales.h"
+
+1715473160 b:\laboratorio 2 2024\tallercarpinteria\clientes.h
+	"Fecha.h"
+	"persona.h"
+
+1715798899 source:b:\laboratorio 2 2024\tallercarpinteria\trabajos.cpp
+	<iostream>
+	"trabajos.h"
+	"funcionesGlobales.h"
+
+1715799390 b:\laboratorio 2 2024\tallercarpinteria\trabajos.h
+	"Clientes.h"
+	"placa.h"
+
+1715795901 source:b:\laboratorio 2 2024\tallercarpinteria\archivostrabajos.cpp
+	<iostream>
+	"ArchivosTrabajos.h"
+	<cstring>
+
+1715615213 b:\laboratorio 2 2024\tallercarpinteria\archivostrabajos.h
+	"trabajos.h"
+
+1715799106 source:b:\laboratorio 2 2024\tallercarpinteria\archivomedidas.cpp
+	<iostream>
+	"ArchivosMedidas.h"
+	<cstring>
+
+1715615797 b:\laboratorio 2 2024\tallercarpinteria\archivosmedidas.h
+	"medidas.h"
+
