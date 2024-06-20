@@ -6,7 +6,6 @@ public:
 	ArchivosTrabajos();
 	bool agregarTrabajo(trabajos obj);
 	bool eliminarTrabajo(int idTrabajo);
-	void listarTrabajo(int estadoEjecucion);
 	trabajos leerRegistro(int pos);
 	int contarRegistro();
 	int buscarPosicion(int idTrabajo);

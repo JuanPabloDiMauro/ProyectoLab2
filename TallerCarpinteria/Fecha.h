@@ -2,11 +2,7 @@
 
 class fecha {
 
-    public:
-
-        void Cargar();
-        void mostrar();
-
+public:
         int getdia();
         int getmes();
         int getanio();
@@ -17,7 +13,7 @@ class fecha {
 
         fecha(int dia, int mes, int anio);
         fecha();
-    private:
+private:
         int _Dia, _Mes, _Anio;
 
 };

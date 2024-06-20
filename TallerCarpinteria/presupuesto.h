@@ -6,12 +6,13 @@ class presupuesto{
 
         void setmetrocuadrado(float metrocuadrado);
         void setprecio(float precio);
-        void setPrecioTotal();
+        void setPrecioPlacas(int CantPlacas);
+		void setPrecioObra();
 
-        float getPrecioTotal();
-        float getmetrocuadrado();
-        float getprecio();
+        float getPrecioPlacas();
+		float getPrecioObra();
 
     private:
-        float _metroCuadrado, _precio, _PrecioTotal;
+        float _metroCuadrado, _precio;
+        float _PrecioPlaca, _PrecioObra;
 };

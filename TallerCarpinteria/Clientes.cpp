@@ -1,42 +1,30 @@
-#include <iostream>
 #include "Clientes.h"
-#include "funcionesGlobales.h"
+#include <cstring>
 
 Clientes::Clientes(){
-}
-void Clientes :: cargar(){
-	std::cout << "INGRESAR DATOS DEL CLIENTE";
-	std::cout << std::endl;
-	persona::cargarPersona();
-	std::cout << "Direccion: ";
-	cargarCadena(_Direccion, 15);
-	std::cout << "Fecha de Entrega: " << std::endl;
-	_FechaEntrega.Cargar();
+	persona();
+	strcpy(_Direccion, "S/D");
+	fecha();
 	_Estado=true;
 }
-void Clientes :: mostrar(){
-	std::cout << "DATOS DEL CLIENTE: ";
-	std::cout << std::endl;
-	persona::mostrarPersona();
-	std::cout << "Direccion: " << getDireccion() << std::endl;
-	std::cout << "Fecha de Entrega: ";
-	_FechaEntrega.mostrar();
+void Clientes :: setDireccion(std::string direccion){
+	if(direccion.size() <= 30){
+		strcpy(_Direccion, direccion.c_str());
+	}
 }
-
-void Clientes :: setDireccion(const char * direccion){
-	cargarCadena(_Direccion, 15);
-}
-void Clientes :: setFechaEntrega(){
-	_FechaEntrega.Cargar();
+void Clientes :: setFechaEntrega(int dia, int mes, int anio){
+	_FechaEntrega.setdia(dia);
+	_FechaEntrega.setmes(mes);
+	_FechaEntrega.setanio(anio);
 }
 void Clientes :: setEstado(bool estado){
 	_Estado=estado;
 }
 
-const char * Clientes :: getDireccion(){
+std::string Clientes :: getDireccion(){
 	return _Direccion;
 }
-void Clientes :: getFechaEntrega(){
-	_FechaEntrega.mostrar();
+fecha Clientes :: getFechaEntrega(){
+	return _FechaEntrega;
 }
 

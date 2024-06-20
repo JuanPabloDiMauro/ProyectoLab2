@@ -33,7 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="ArchivoMedidas.cpp" />
+		<Unit filename="ArchivoPlacas.h" />
+		<Unit filename="ArchivosInsumos.cpp" />
+		<Unit filename="ArchivosInsumos.h" />
 		<Unit filename="ArchivosMedidas.h" />
+		<Unit filename="ArchivosPlacas.cpp" />
 		<Unit filename="ArchivosTrabajos.cpp" />
 		<Unit filename="ArchivosTrabajos.h" />
 		<Unit filename="CalcularPlacas.cpp" />
@@ -42,8 +46,10 @@
 		<Unit filename="Clientes.h" />
 		<Unit filename="Fecha.cpp" />
 		<Unit filename="Fecha.h" />
-		<Unit filename="funcionesGlobales.cpp" />
-		<Unit filename="funcionesGlobales.h" />
+		<Unit filename="InsumosTrabajo.cpp" />
+		<Unit filename="InsumosTrabajo.h" />
+		<Unit filename="TrabajosManager.cpp" />
+		<Unit filename="TrabajosManager.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="medidas.cpp" />
 		<Unit filename="medidas.h" />

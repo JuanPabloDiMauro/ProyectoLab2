@@ -1,28 +1,25 @@
 #pragma once
 #include "placa.h"
 
+
 class medidas{
     public:
         medidas();
 
-        void cargar();
-		void mostrar();
 		void setAnchoRecorte(float a);
 		void setAlturaRecorte(float a);
 		void setCantRecortes(int cant);
-		void setIdMedidas(int idmedidas);
-		void setEstado(bool estado);
+		void setIdTrabajo(int id);
+		void setIdPlaca(int id);
 
-		int getIdMedidas();
+		int getIdPlaca();
+		int getIdTrabajo();
 		float GetAnchoRecorte();
 		float getAlturaRecorte();
 		int getCantRecortes();
-
-		~medidas();
     private:
         float _largoRecorte, _anchoRecorte;
-        int _cantRecortes, _IdMedidas;
-        bool _Estado;
+        int _cantRecortes, _IdTrabajo, _IdPlaca;
 };
 
-/// TERMINADOOOO
+

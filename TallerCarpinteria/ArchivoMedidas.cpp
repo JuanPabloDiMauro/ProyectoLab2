@@ -9,6 +9,7 @@ bool ArchivosMedidas :: agregarMedidas(medidas obj){
 	FILE *p;
 	p=fopen(nombre, "ab");
 	if(p==nullptr){
+		std::cout << "ERROR DE APERTURA DE ARCHIVO 7" << std::endl;
 		return false;
 	}
 	bool escribio=fwrite(&obj, sizeof obj, 1, p);
@@ -29,48 +30,41 @@ bool ArchivosMedidas :: eliminarMedidas(int idTrabajo){
 	bool bandera=false;
 	int cont=contarRegistro();
 	for(int i=0; i<cont; i++){
+		obj = leerRegistro(i);
 		fread(&obj, sizeof obj, 1, p);
-		if(obj.getIdMedidas() == idTrabajo){
-			obj.setEstado(false);
+		if(obj.getIdTrabajo() == idTrabajo){
 			fseek(p, sizeof obj * i, 0);
 			fwrite(&obj, sizeof obj, 1, p);
 			bandera = true;
 		}
 	}
 	fclose(p);
-	if(bandera == true){
-		return true;
-	}
-	return false;
+	return bandera;
 }
-void ArchivosMedidas :: listarRegistro(int idMedidas){
+medidas ArchivosMedidas :: leerRegistro(int pos){
 	medidas obj;
+	obj.setIdTrabajo(-1);
 	FILE *p;
 	p=fopen(nombre, "rb");
 	if(p==nullptr){
-		return;
+		std::cout << "ERROR DE APERTURA DE ARCHIVO 9" << std::endl;
+		return obj;
 	}
-	int cont = contarRegistro();
-	for(int i=0; i<cont; i++){
-		fread(&obj, sizeof obj, 1, p);
-		if(obj.getIdMedidas() == idMedidas){
-			obj.mostrar();
-		}
-	}
+	fseek(p, sizeof obj * pos, 0);
+	fread(&obj, sizeof obj, 1, p);
 	fclose(p);
-	return;
+	return obj;
 }
 int ArchivosMedidas :: contarRegistro(){
 	medidas obj;
 	FILE *p;
 	p=fopen(nombre, "rb");
 	if(p==nullptr){
+		std::cout << "ERROR DE APERTURA DE ARCHIVO 7" << std::endl;
 		return -1;
 	}
-	int i=0;
-	while(fread(&obj, sizeof obj, 1, p)){
-		i++;
-	}
+	fseek(p, 0, 2);
+	int cant=ftell(p) / sizeof (medidas);
 	fclose(p);
-	return i;
+	return cant;
 }

@@ -29,14 +29,29 @@ bool ArchivosTrabajos :: eliminarTrabajo(int idTrabajo){
 	}
 	int pos=buscarPosicion(idTrabajo);
 	if(pos < 0){
+		fclose(p);
 		return false;
 	}
 	obj=leerRegistro(pos);
-	obj.mostrar();
-	std::cout << "desea eliminar este registro? "<< std::endl;
-	std::cout << "SI = 1 " << std::endl;
-	std::cout << "NO = 0" << std::endl;
-	std::cout << "opcion: ";
+	std::cout << "ID TRABAJO: " <<obj.getIdTrabajo() << std::endl;
+	std::cout << std::endl;
+	std::cout << "DATOS CLIENTE: ";
+	std::cout << std::endl << std::endl;
+	std::cout << "APELLIDO: " << obj.getdatoscliente().getapellido() << std::endl;
+	std::cout << "NOMBRE: " << obj.getdatoscliente().getnombre() << std::endl;
+	std::cout << "CELULAR: " << obj.getdatoscliente().getcelular() << std::endl;
+	std::cout << "DIRECCION: " << obj.getdatoscliente().getDireccion() << std::endl;
+	std::cout << "FECHA DE ENTREGA: " << obj.getdatoscliente().getFechaEntrega().getdia() << "/";
+	std::cout << obj.getdatoscliente().getFechaEntrega().getmes() << "/";
+	std::cout << obj.getdatoscliente().getFechaEntrega().getanio() << std::endl;
+	std::cout << std::endl << "PRESUPUESTO DE OBRA: " << std::endl;
+	std::cout << "PRECIO DE OBRA: " << obj.getPrecioObra() << std::endl;
+	std::cout << "PRECIO DE PLACAS: " << obj.getPrecioPlacas() << std::endl;
+	std::cout << std::endl;
+	std::cout << "ELIMINAR LA OBRA DEL PROGRAMA? ";
+	std::cout << "1 - SI: " << std::endl;
+	std::cout << "0 - NO: " << std::endl;
+	std::cout << "OPCION: ";
 	std::cin >> opcion;
 	if(opcion == false){
 		fclose(p);
@@ -48,22 +63,7 @@ bool ArchivosTrabajos :: eliminarTrabajo(int idTrabajo){
 	fclose(p);
 	return true;
 }
-void ArchivosTrabajos :: listarTrabajo(int estadoEjecucion){
-	trabajos obj;
-	FILE *p;
-	p=fopen(Nombre, "rb");
-	if(p==nullptr){
-		return;
-	}
-	int cont=contarRegistro();
-	for(int i=0; i<cont; i++){
-		if(obj.getEstadoDeEjecucion()==estadoEjecucion){
-			obj.mostrar();
-			std::cout << std::endl;
-		}
-	}
-	fclose(p);
-}
+
 trabajos ArchivosTrabajos :: leerRegistro(int pos){
 	trabajos obj;
 	FILE *p;
@@ -76,20 +76,19 @@ trabajos ArchivosTrabajos :: leerRegistro(int pos){
 	fclose(p);
 	return obj;
 }
+
 int ArchivosTrabajos :: contarRegistro(){
-	trabajos obj;
 	FILE *p;
 	p=fopen(Nombre, "rb");
 	if(p==nullptr){
-		return -1;
+		return 0;
 	}
-	int i=0;
-	while(fread(&obj, sizeof obj, 1, p)){
-		i++;
-	}
+	fseek(p, 0, 2);
+	int cant=ftell(p) / sizeof (trabajos);
 	fclose(p);
-	return i;
+	return cant;
 }
+
 int ArchivosTrabajos :: buscarPosicion(int idTrabajo){
 	trabajos obj;
 	FILE *p;
@@ -97,23 +96,21 @@ int ArchivosTrabajos :: buscarPosicion(int idTrabajo){
 	if(p==nullptr){
 		return -1;
 	}
-	int m=0;
 	int cont=contarRegistro();
 	for(int i=0; i<cont; i++){
-		fread(&obj, sizeof obj, 1, p);
+		obj = leerRegistro(i);
 		if(idTrabajo == obj.getIdTrabajo()){
-			break;
-		}else{
-			m++;
+			fclose(p);
+			return i;
 		}
 	}
 	fclose(p);
-	return m;
+	return -1;
 }
 
 int ArchivosTrabajos :: NuevoIdTrabajo(){
 	int cont=contarRegistro();
-	if(cont < 0){
+	if(cont == 0){
 		return 1;
 	}
 	trabajos obj=leerRegistro(cont - 1);
@@ -122,7 +119,7 @@ int ArchivosTrabajos :: NuevoIdTrabajo(){
 
 bool ArchivosTrabajos :: ModificarTrabajo(int idtrabajo){
 	trabajos obj;
-	int opcion;
+	bool opcion;
 	FILE *p;
 	p=fopen(Nombre, "rb+");
 	if(p==nullptr){
@@ -130,18 +127,34 @@ bool ArchivosTrabajos :: ModificarTrabajo(int idtrabajo){
 	}
 	int pos=buscarPosicion(idtrabajo);
 	if(pos==-1){
+		std::cout << "ERROR DE APERTURA DE ARCHIVO 8" << std::endl;
+		fclose(p);
 		return false;
 	}
 	obj=leerRegistro(pos);
-	obj.mostrar();
+	std::cout << "ID TRABAJO: " <<obj.getIdTrabajo() << std::endl;
+	std::cout << std::endl;
+	std::cout << "DATOS CLIENTE: ";
+	std::cout << std::endl << std::endl;
+	std::cout << "APELLIDO: " << obj.getdatoscliente().getapellido() << std::endl;
+	std::cout << "NOMBRE: " << obj.getdatoscliente().getnombre() << std::endl;
+	std::cout << "CELULAR: " << obj.getdatoscliente().getcelular() << std::endl;
+	std::cout << "DIRECCION: " << obj.getdatoscliente().getDireccion() << std::endl;
+	std::cout << "FECHA DE ENTREGA: " << obj.getdatoscliente().getFechaEntrega().getdia() << "/";
+	std::cout << obj.getdatoscliente().getFechaEntrega().getmes() << "/";
+	std::cout << obj.getdatoscliente().getFechaEntrega().getanio() << std::endl;
+	std::cout << std::endl << "PRESUPUESTO DE OBRA: " << std::endl;
+	std::cout << "PRECIO DE OBRA: " << obj.getPrecioObra() << std::endl;
+	std::cout << "PRECIO DE PLACAS: " << obj.getPrecioPlacas() << std::endl;
+	std::cout << std::endl;
 	std::cout << "LA OBRA FUE FINALIZADA? ";
 	std::cout << "1 - SI: " << std::endl;
-	std::cout << "2 - NO: " << std::endl;
+	std::cout << "0 - NO: " << std::endl;
 	std::cout << "OPCION: ";
 	std::cin >> opcion;
-	if(opcion == 1){
+	if(opcion == true){
 		fseek(p, sizeof obj * pos, 0);
-		obj.setEstadoDeEjecucion(2);
+		obj.setEstadoDeEjecucion(false);
 		fwrite(&obj, sizeof obj, 1, p);
 		fclose(p);
 		return true;

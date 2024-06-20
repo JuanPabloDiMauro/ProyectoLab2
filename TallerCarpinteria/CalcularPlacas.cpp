@@ -1,6 +1,8 @@
 #include "CalcularPlacas.h"
 
 CalcularPlacas :: CalcularPlacas(){
+	_Sobrante = 0;
+	_superficiePlaca = 0;
 	_SuperficieRecortes = 0;
 	_CantPlacas = 1;
 }
@@ -10,7 +12,9 @@ void CalcularPlacas :: setSuperficiePlaca(placa obj){
 }
 
 void CalcularPlacas :: setSuperficieRecortes(medidas obj){
-	_SuperficieRecortes += (obj.getAlturaRecorte()/100) * (obj.GetAnchoRecorte()/100) * obj.getCantRecortes();
+	if(obj.getAlturaRecorte()>0 && obj.GetAnchoRecorte() > 0 && obj.getCantRecortes()>0){
+		_SuperficieRecortes += (obj.getAlturaRecorte()/100) * (obj.GetAnchoRecorte()/100) * obj.getCantRecortes();
+	}
 }
 
 void CalcularPlacas :: setCantPlacas(){
@@ -40,5 +44,5 @@ int CalcularPlacas :: getCantPlacas(){
 	return _CantPlacas;
 }
 
-/// TERMINADOOOO
+
 

@@ -1,22 +1,5 @@
-#include <iostream>
 #include "Fecha.h"
 #include <ctime>
-
-void fecha :: Cargar(){
-	int dia, mes, anio;
-	std::cout << "Dia: ";
-	std::cin >> dia;
-	setdia(dia);
-	std::cout << "Mes: ";
-	std::cin >> mes;
-	setmes(mes);
-	std::cout << "Año: ";
-	std::cin >> anio;
-	setanio(anio);
-}
-void fecha :: mostrar(){
-	std::cout << _Dia << "/" << _Mes << "/" << _Anio << std::endl;
-}
 
 int fecha :: getdia(){
     return _Dia;

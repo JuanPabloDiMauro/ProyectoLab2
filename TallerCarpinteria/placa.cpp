@@ -2,14 +2,20 @@
 #include <cstring>
 
 placa :: placa (){
-    _Largo = 260;
-    _Ancho = 183;
-    strcpy(_color, "blanco");
-    _precio = 0;
+	strcpy(_color, "S/C");
+	_Largo = 0;
+	_Ancho = 0;
+	_IdPlaca = 0;
 }
 
-void placa ::  setcolor(const char * color){
-    strcpy(_color, color);
+void placa :: setIdPlaca(int id){
+	_IdPlaca = id;
+}
+
+void placa ::  setcolor(std::string color){
+    if(color.size() <= 30){
+		strcpy(_color, color.c_str());
+    }
 }
 
 void placa :: setlargo(float largo){
@@ -29,11 +35,16 @@ void placa :: setprecio(float precio){
         _precio = precio;
     }
 }
+
+int placa :: getIdPlaca(){
+	return _IdPlaca;
+}
+
 float placa :: getprecio(){
 	return _precio;
 }
 
-const char * placa ::  getcolor(){
+std::string placa ::  getcolor(){
     return _color;
 }
 
@@ -44,5 +55,3 @@ float placa :: getlargo(){
 float placa :: getancho(){
     return _Ancho;
 }
-
-/// TERMINADOOOO

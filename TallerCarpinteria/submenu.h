@@ -1,4 +1,5 @@
 #pragma once
+#include "TrabajosManager.h"
 
 class submenu{
     public:
@@ -6,7 +7,7 @@ class submenu{
         void subprograma2();
         void subprograma3();
         void subprograma4();
-        void subprograma5();
     private:
         int _opcion;
+        TrabajosManager _ObjTrabajosManager;
 };

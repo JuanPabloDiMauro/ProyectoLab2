@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include "submenu.h"
-#include "funcionesGlobales.h"
 
 void submenu :: subprograma1(){
     do{
@@ -17,31 +16,31 @@ void submenu :: subprograma1(){
         switch(_opcion){
             case 1:
                 system("cls");
-				nuevoTrabajo();
+				_ObjTrabajosManager.CargarTrabajos();
                 system("pause");
                 system("cls");
                 break;
             case 2:
                 system("cls");
-				TrabajosEnEjecucion();
+				_ObjTrabajosManager.TrabajosEnEjecucion();
                 system("pause");
                 system("cls");
                 break;
             case 3:
                 system("cls");
-				TrabajosFinalizados();
+				_ObjTrabajosManager.TrabajosFinalizados();
                 system("pause");
                 system("cls");
                 break;
             case 4:
                 system("cls");
-				BorrarTrabajo();
+				_ObjTrabajosManager.BorrarTrabajo();
                 system("pause");
                 system("cls");
                 break;
 			case 5:
 				system("cls");
-				ModificarTrabajo();
+				_ObjTrabajosManager.ModificarTrabajo();
                 system("pause");
                 system("cls");
                 break;
@@ -62,9 +61,9 @@ void submenu :: subprograma1(){
 void submenu :: subprograma2(){
     do{
         cout << "1) --- LISTAR CLIENTES --- " << endl;
-        cout << "1) --- MODIFICAR CLIENTE --- " << endl;
-        cout << "2) --- NUEVO CLIENTE --- " << endl;
-        cout << "3) --- BORRAR CLIENTE --- " << endl;
+        cout << "2) --- MODIFICAR CLIENTE --- " << endl;
+        cout << "3) --- NUEVO CLIENTE --- " << endl;
+        cout << "4) --- BORRAR CLIENTE --- " << endl;
         cout << "0) --- VOLVER --- " << endl;
         cout << endl;
         cout << "opcion: ";
@@ -104,55 +103,6 @@ void submenu :: subprograma2(){
 
 void submenu :: subprograma3(){
     do{
-        cout << "1) --- INGRESAR HORA Y PAGO --- " << endl;
-        cout << "2) --- MOSTRAR SUELDOS --- " << endl;
-        cout << "3) --- AGREGAR EMPLEADOS --- " << endl;
-        cout << "4) --- ELIMINAR EMPLEADOS --- " << endl;
-        cout << "0) --- VOLVER --- " << endl;
-		cout << endl;
-        cout << "opcion: ";
-        cin >> _opcion;
-        switch(_opcion){
-            case 1:
-                system("cls");
-
-                system("pause");
-                system("cls");
-                break;
-            case 2:
-                system("cls");
-
-                system("pause");
-                system("cls");
-                break;
-            case 3:
-                system("cls");
-
-                system("pause");
-                system("cls");
-                break;
-            case 4:
-                system("cls");
-
-                system("pause");
-                system("cls");
-                break;
-            case 0:
-                system("cls");
-                break;
-            default:
-                system("cls");
-                    cout << "OPCION INVALIDA" << endl;
-                system("pause");
-                system("cls");
-                break;
-        }
-    }
-    while(_opcion != 0);
-}
-
-void submenu :: subprograma4(){
-    do{
         cout << "1) --- SOBRANTE DE PLACAS --- " << endl;
         cout << "2) --- ELIMINAR SOBRANTE --- " << endl;
         cout << "0) --- VOLVER --- " << endl;
@@ -186,7 +136,7 @@ void submenu :: subprograma4(){
     while(_opcion != 0);
 }
 
-void submenu :: subprograma5(){
+void submenu :: subprograma4(){
     do{
         cout << "1) --- BALANCE MENSUAL --- " << endl;
         cout << "2) --- INGRESOS --- " << endl;

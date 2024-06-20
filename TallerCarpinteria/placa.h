@@ -1,25 +1,24 @@
 #pragma once
+#include <string>
 
 class placa{
     public:
         placa();
 
-        void setcolor(const char * color);
+        void setIdPlaca(int id);
+        void setcolor(std::string color);
         void setlargo(float largo);
         void setancho(float ancho);
         void setprecio(float precio);
-        void setestado();
 
-        const char * getcolor();
+        int getIdPlaca();
+        std::string getcolor();
         float getlargo();
         float getancho();
         float getprecio();
-        bool getestado();
 
     private:
-        char _color[10];
+        int _IdPlaca;
+        char _color[30];
         float _Largo, _precio, _Ancho;
-        bool _Estado;
 };
-
-/// TERMINADOOOO

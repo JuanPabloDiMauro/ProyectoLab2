@@ -1,20 +1,18 @@
 #pragma once
 #include "Fecha.h"
 #include "persona.h"
+#include <string>
 
 class Clientes : public persona {
 public:
 	Clientes();
 
-	void cargar();
-	void mostrar();
-
-	void setDireccion(const char * direccion);
-	void setFechaEntrega();
+	void setDireccion(std::string direccion);
+	void setFechaEntrega(int dia, int mes, int anio);
 	void setEstado(bool estado);
 
-	const char * getDireccion();
-	void getFechaEntrega();
+	std::string getDireccion();
+	fecha getFechaEntrega();
 
 private:
 	char _Direccion[30];

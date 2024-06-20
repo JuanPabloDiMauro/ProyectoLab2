@@ -1,39 +1,29 @@
 #pragma once
 #include "Clientes.h"
-#include "placa.h"
+#include "InsumosTrabajo.h"
 
 class trabajos{
     public:
         trabajos();
 
-		void mostrar();
 		void setIdTrabajo(int idTrabajo);
-		void setplaca(placa Tplaca);
-		void setCantPlacas(int cant);
-		void setPrecioPlacas(float precio);
-		void setPrecioObra(float precio);
-		void setdatoscliente();
-		void setEstadoDeEjecucion(int estado);
+		void setdatoscliente(Clientes DatosCliente);
+		void setEstadoDeEjecucion(bool estado);
 		void setEstado(bool estado);
+		void setPrecioPlacas(float PrecioPlacas);
+		void setPrecioObra(float PrecioObra);
 
-		Clientes getdatoscliente();
-		placa getplaca();
-		int getCantPlaca();
-		int getIdTrabajo();
 		float getPrecioPlacas();
 		float getPrecioObra();
-		int getEstadoDeEjecucion();
+		Clientes getdatoscliente();
+		int getIdTrabajo();
+		bool getEstadoDeEjecucion();
 		bool getestado();
 
     private:
         int _idTrabajo;
+        float _PrecioPlacas, _PrecioObra;
 		Clientes _DatosCliente;
-		placa _TipoPlaca;
-		int _CantPlacas;
-		float _PrecioPlacas;
-		float _PrecioObra;
-		int _EstadoDeEjecucion; /// 1-en obra 2-Terminada
+		bool _EstadoDeEjecucion; /// true-en obra false-Terminada
 		bool _estado;
 };
-
-/// TERMINADOOOO

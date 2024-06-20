@@ -12,9 +12,8 @@ void menu :: programa(){
         cout << endl;
         cout << "1) --- TRABAJOS --- " << endl;
         cout << "2) --- CLIENTES --- " << endl;
-        cout << "3) --- EMPLEADOS --- " << endl;
-        cout << "4) --- STOCK --- " << endl;
-        cout << "5) --- GASTOS E INGRESOS --- " << endl;
+        cout << "3) --- STOCK --- " << endl;
+        cout << "4) --- GASTOS E INGRESOS --- " << endl;
         cout << "0) --- SALIR --- " << endl;
         cout << endl;
         cout << "opcion: ";
@@ -35,10 +34,6 @@ void menu :: programa(){
             case 4:
                 system("cls");
                 a.subprograma4();
-                break;
-			case 5:
-				system("cls");
-                a.subprograma5();
                 break;
             case 0:
                 system("cls");

@@ -6,8 +6,8 @@ public:
 	ArchivosMedidas ();
 	bool agregarMedidas(medidas obj);
 	bool eliminarMedidas(int idTrabajo);
-	void listarRegistro(int idMedidas);
 	int contarRegistro();
+	medidas leerRegistro(int pos);
 
 private:
 	char nombre[15];

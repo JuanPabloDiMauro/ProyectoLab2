@@ -1,41 +1,33 @@
-#include <iostream>
 #include "persona.h"
 #include <cstring>
-#include "funcionesGlobales.h"
 
 persona :: persona(){
-
+	strcpy(_Nombre, "SIN NOMBRE");
+	strcpy(_Apellido, "SIN APELLIDO");
+	strcpy(_Celular, "SIN NUMERO");
 }
-const char * persona :: getapellido(){
+std::string persona :: getapellido(){
     return _Apellido;
 }
-const char * persona :: getnombre(){
+std::string persona :: getnombre(){
     return _Nombre;
 }
-const char * persona :: getcelular(){
+std::string persona :: getcelular(){
 	return _Celular;
 }
 
-void persona :: setcelular(const char * celular){
-    strcpy(_Celular, celular);
+void persona :: setcelular(std::string celular){
+    if(celular.size() <= 15){
+		strcpy(_Celular, celular.c_str());
+    }
 }
-void persona :: setapellido(const char * apellido){
-    strcpy(_Apellido , apellido);
+void persona :: setapellido(std::string apellido){
+    if(apellido.size() <= 15){
+		strcpy(_Apellido, apellido.c_str());
+    }
 }
-void persona :: setnombre(const char * nombre){
-    strcpy(_Nombre , nombre);
+void persona :: setnombre(std::string nombre){
+    if(nombre.size() <= 15){
+		strcpy(_Nombre, nombre.c_str());
+    }
 }
-void persona :: cargarPersona(){
-	std::cout << "Nombre: ";
-	cargarCadena(_Nombre, 15);
-	std::cout << "Apellido: ";
-	cargarCadena(_Apellido, 15);
-	std::cout << "Celular: ";
-	cargarCadena(_Celular, 15);
-}
-void persona :: mostrarPersona(){
-	std::cout << "Nombre completo: " << _Apellido << " , " << _Nombre << std::endl;
-	std::cout << "Celular: " <<  _Celular << std::endl;
-}
-
-/// terminadooo
