@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TallerCarpinteria" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TallerCarpinteria" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TallerCarpinteria" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="ArchivoEstadoEntrega.h" />
+		<Unit filename="ArchivoMedidas.cpp" />
+		<Unit filename="ArchivoPlacas.h" />
+		<Unit filename="ArchivosEstadoEntrega.cpp" />
+		<Unit filename="ArchivosInsumos.cpp" />
+		<Unit filename="ArchivosInsumos.h" />
+		<Unit filename="ArchivosMedidas.h" />
+		<Unit filename="ArchivosPlacas.cpp" />
+		<Unit filename="ArchivosStock.cpp" />
+		<Unit filename="ArchivosStock.h" />
+		<Unit filename="ArchivosTrabajos.cpp" />
+		<Unit filename="ArchivosTrabajos.h" />
+		<Unit filename="CalcularPlacas.cpp" />
+		<Unit filename="CalcularPlacas.h" />
+		<Unit filename="Clientes.cpp" />
+		<Unit filename="Clientes.h" />
+		<Unit filename="ClientesManager.cpp" />
+		<Unit filename="ClientesManager.h" />
+		<Unit filename="EstadoEntrega.cpp" />
+		<Unit filename="EstadoEntrega.h" />
+		<Unit filename="Fecha.cpp" />
+		<Unit filename="Fecha.h" />
+		<Unit filename="GastoIngreso.cpp" />
+		<Unit filename="GastoIngreso.h" />
+		<Unit filename="GastoIngresoManager.cpp" />
+		<Unit filename="GastoIngresoManager.h" />
+		<Unit filename="InsumosTrabajo.cpp" />
+		<Unit filename="InsumosTrabajo.h" />
+		<Unit filename="Stock.cpp" />
+		<Unit filename="Stock.h" />
+		<Unit filename="StockManager.cpp" />
+		<Unit filename="StockManager.h" />
+		<Unit filename="TrabajosManager.cpp" />
+		<Unit filename="TrabajosManager.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="medidas.cpp" />
+		<Unit filename="medidas.h" />
+		<Unit filename="menu.cpp" />
+		<Unit filename="menu.h" />
+		<Unit filename="persona.cpp" />
+		<Unit filename="persona.h" />
+		<Unit filename="placa.cpp" />
+		<Unit filename="placa.h" />
+		<Unit filename="presupuesto.cpp" />
+		<Unit filename="presupuesto.h" />
+		<Unit filename="submenu.cpp" />
+		<Unit filename="submenu.h" />
+		<Unit filename="trabajos.cpp" />
+		<Unit filename="trabajos.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

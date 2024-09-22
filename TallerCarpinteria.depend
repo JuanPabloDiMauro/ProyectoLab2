@@ -1,0 +1,232 @@
+# depslib dependency file v1.0
+1720023685 source:b:\laboratorio 2 2024\tallercarpinteria\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1718303979 b:\laboratorio 2 2024\tallercarpinteria\fecha.h
+
+1715572055 source:b:\laboratorio 2 2024\tallercarpinteria\main.cpp
+	"menu.h"
+
+1715615213 b:\laboratorio 2 2024\tallercarpinteria\funcionesglobales.h
+	"placa.h"
+	"medidas.h"
+	"trabajos.h"
+
+1718162732 b:\laboratorio 2 2024\tallercarpinteria\presupuesto.h
+
+1720023474 source:b:\laboratorio 2 2024\tallercarpinteria\medidas.cpp
+	"medidas.h"
+
+1718429324 b:\laboratorio 2 2024\tallercarpinteria\medidas.h
+	"placa.h"
+
+1718164900 b:\laboratorio 2 2024\tallercarpinteria\placa.h
+	<string>
+
+1718905157 source:b:\laboratorio 2 2024\tallercarpinteria\menu.cpp
+	<iostream>
+	"menu.h"
+	"submenu.h"
+
+1699304307 b:\laboratorio 2 2024\tallercarpinteria\menu.h
+
+1719701055 b:\laboratorio 2 2024\tallercarpinteria\submenu.h
+	"TrabajosManager.h"
+	"ClientesManager.h"
+	"StockManager.h"
+	"GastoIngresoManager.h"
+
+1720031695 source:b:\laboratorio 2 2024\tallercarpinteria\persona.cpp
+	"persona.h"
+	<cstring>
+
+1720031695 b:\laboratorio 2 2024\tallercarpinteria\persona.h
+	<string>
+
+1718517669 source:b:\laboratorio 2 2024\tallercarpinteria\placa.cpp
+	"placa.h"
+	<cstring>
+
+1719803787 source:b:\laboratorio 2 2024\tallercarpinteria\presupuesto.cpp
+	"presupuesto.h"
+
+1719962288 source:b:\laboratorio 2 2024\tallercarpinteria\submenu.cpp
+	<iostream>
+	"submenu.h"
+
+1717696424 source:b:\laboratorio 2 2024\tallercarpinteria\funcionesglobales.cpp
+
+1719803282 source:b:\laboratorio 2 2024\tallercarpinteria\calcularplacas.cpp
+	"CalcularPlacas.h"
+
+1715549389 b:\laboratorio 2 2024\tallercarpinteria\calcularplacas.h
+	"placa.h"
+	"medidas.h"
+
+1718517348 source:b:\laboratorio 2 2024\tallercarpinteria\clientes.cpp
+	"Clientes.h"
+	<cstring>
+
+1717315946 b:\laboratorio 2 2024\tallercarpinteria\clientes.h
+	"Fecha.h"
+	"persona.h"
+	<string>
+
+1719804004 source:b:\laboratorio 2 2024\tallercarpinteria\trabajos.cpp
+	"trabajos.h"
+
+1718515957 b:\laboratorio 2 2024\tallercarpinteria\trabajos.h
+	"Clientes.h"
+	"InsumosTrabajo.h"
+
+1719982114 source:b:\laboratorio 2 2024\tallercarpinteria\archivostrabajos.cpp
+	<iostream>
+	"ArchivosTrabajos.h"
+	<cstring>
+
+1718427443 b:\laboratorio 2 2024\tallercarpinteria\archivostrabajos.h
+	"trabajos.h"
+
+1719702783 source:b:\laboratorio 2 2024\tallercarpinteria\archivomedidas.cpp
+	<iostream>
+	"ArchivosMedidas.h"
+	<cstring>
+
+1719702783 b:\laboratorio 2 2024\tallercarpinteria\archivosmedidas.h
+	"medidas.h"
+
+1720126756 source:b:\laboratorio 2 2024\tallercarpinteria\trabajosmanager.cpp
+	<iostream>
+	<locale.h>
+	"trabajosManager.h"
+	"CalcularPlacas.h"
+	"Clientes.h"
+	"presupuesto.h"
+
+1719508843 b:\laboratorio 2 2024\tallercarpinteria\trabajosmanager.h
+	"trabajos.h"
+	"ArchivosTrabajos.h"
+	"medidas.h"
+	"ArchivosMedidas.h"
+	"placa.h"
+	"ArchivoPlacas.h"
+	"InsumosTrabajo.h"
+	"ArchivosInsumos.h"
+
+1719703146 source:b:\laboratorio 2 2024\tallercarpinteria\archivosplacas.cpp
+	<iostream>
+	"ArchivoPlacas.h"
+	<cstring>
+
+1718911246 b:\laboratorio 2 2024\tallercarpinteria\archivoplacas.h
+	"placa.h"
+
+1717702724 source:b:\laboratorio 2 2024\tallercarpinteria\archivospresupuesto.cpp
+	<iostream>
+	"ArchivosPresupuesto.h"
+	<cstring>
+
+1717702701 b:\laboratorio 2 2024\tallercarpinteria\archivospresupuesto.h
+	"presupuesto.h"
+
+1718911962 source:b:\laboratorio 2 2024\tallercarpinteria\insumostrabajo.cpp
+	"InsumosTrabajo.h"
+
+1718199255 b:\laboratorio 2 2024\tallercarpinteria\insumostrabajo.h
+
+1719702914 source:b:\laboratorio 2 2024\tallercarpinteria\archivosinsumos.cpp
+	<iostream>
+	"ArchivosInsumos.h"
+	<cstring>
+
+1718306212 b:\laboratorio 2 2024\tallercarpinteria\archivosinsumos.h
+	"InsumosTrabajo.h"
+
+1719962241 b:\laboratorio 2 2024\tallercarpinteria\clientesmanager.h
+	"EstadoEntrega.h"
+	"ArchivoEstadoEntrega.h"
+
+1719381104 b:\laboratorio 2 2024\tallercarpinteria\archivoclientesmanager.h
+	"ClientesManager.h"
+	"Clientes.h"
+	"Fecha.h"
+
+1720039453 source:b:\laboratorio 2 2024\tallercarpinteria\clientesmanager.cpp
+	<iostream>
+	"ClientesManager.h"
+	"ArchivoEstadoEntrega.h"
+	"ArchivosTrabajos.h"
+	"trabajos.h"
+
+1719381104 source:b:\laboratorio 2 2024\tallercarpinteria\archivosclientesmanager.cpp
+	"ArchivoClientesManager.h"
+	<cstring>
+
+1719961724 b:\laboratorio 2 2024\tallercarpinteria\estadoentrega.h
+	"Clientes.h"
+	"Fecha.h"
+
+1719961867 b:\laboratorio 2 2024\tallercarpinteria\archivoestadoentrega.h
+	"EstadoEntrega.h"
+
+1720024542 source:b:\laboratorio 2 2024\tallercarpinteria\archivosestadoentrega.cpp
+	<iostream>
+	"ArchivoEstadoEntrega.h"
+	<cstring>
+
+1720046385 source:b:\laboratorio 2 2024\tallercarpinteria\estadoentrega.cpp
+	"EstadoEntrega.h"
+
+1719941723 source:b:\laboratorio 2 2024\tallercarpinteria\stock.cpp
+	"Stock.h"
+	<cstring>
+
+1719519236 b:\laboratorio 2 2024\tallercarpinteria\stock.h
+	<string>
+
+1719936918 b:\laboratorio 2 2024\tallercarpinteria\stockmanager.h
+	"ArchivosStock.h"
+	"ArchivoPlacas.h"
+	"ArchivosInsumos.h"
+	"Stock.h"
+
+1719938514 b:\laboratorio 2 2024\tallercarpinteria\archivosstock.h
+	"Stock.h"
+
+1719942716 source:b:\laboratorio 2 2024\tallercarpinteria\stockmanager.cpp
+	<iostream>
+	"StockManager.h"
+	"InsumosTrabajo.h"
+	"placa.h"
+
+1719942672 source:b:\laboratorio 2 2024\tallercarpinteria\archivosstock.cpp
+	<iostream>
+	"ArchivosStock.h"
+	<cstring>
+
+1719702292 source:b:\laboratorio 2 2024\tallercarpinteria\gastoingreso.cpp
+	"GastoIngreso.h"
+
+1719695830 b:\laboratorio 2 2024\tallercarpinteria\gastoingreso.h
+
+1720127522 source:b:\laboratorio 2 2024\tallercarpinteria\gastoingresomanager.cpp
+	<iostream>
+	<locale.h>
+	"GastoIngresoManager.h"
+	"ArchivosTrabajos.h"
+	"ArchivoEstadoEntrega.h"
+	"EstadoEntrega.h"
+	"trabajos.h"
+
+1719700937 b:\laboratorio 2 2024\tallercarpinteria\gastoingresomanager.h
+	"GastoIngreso.h"
+
+1719695830 b:\laboratorio 2 2024\tallercarpinteria\archivosgastoingreso.h
+	"GastoIngreso.h"
+
+1719695857 source:b:\laboratorio 2 2024\tallercarpinteria\archivosgastoingreso.cpp
+	<iostream>
+	<cstring>
+	"ArchivosGastoIngreso.h"
+
